@@ -11,9 +11,9 @@
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-xl font-semibold">Projects</h2>
             <div class="flex space-x-2">
-                <button class="bg-purple-600 text-white px-4 py-2 rounded">Project Updates</button>
-                <button class="bg-green-600 text-white px-4 py-2 rounded">Project Requests</button>
-                <button class="bg-purple-800 text-white px-4 py-2 rounded">+ Add Project</button>
+                <button id="updateBtn" class="bg-purple-600 text-white px-4 py-2 rounded">Project Updates</button>
+                <button id="requestBtn" class="bg-green-600 text-white px-4 py-2 rounded">Project Requests</button>
+                <button id="addProjectBtn" class="bg-purple-800 text-white px-4 py-2 rounded">+ Add Project</button>
             </div>
         </div>
         <div class="flex space-x-2 mb-4">
@@ -42,14 +42,34 @@
                     <td class="p-2">-</td>
                     <td class="p-2 text-red-600">Estimation Missing</td>
                     <td class="p-2 flex space-x-2">
-                        <button class="text-gray-600">⚙️</button>
-                        <button class="text-gray-600">🔄</button>
-                        <button class="text-gray-600">💬</button>
-                        <button class="text-gray-600">🔖</button>
+                        <button class="text-gray-600 action-btn">⚙️</button>
+                        <button class="text-gray-600 action-btn">🔄</button>
+                        <button class="text-gray-600 action-btn">💬</button>
+                        <button class="text-gray-600 action-btn">🔖</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <script>
+        document.getElementById('updateBtn').addEventListener('click', function() {
+            alert('Project Updates Clicked!');
+        });
+
+        document.getElementById('requestBtn').addEventListener('click', function() {
+            alert('Project Requests Clicked!');
+        });
+
+        document.getElementById('addProjectBtn').addEventListener('click', function() {
+            alert('Add Project Clicked!');
+        });
+
+        document.querySelectorAll('.action-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Action Button Clicked!');
+            });
+        });
+    </script>
 </body>
 </html>
